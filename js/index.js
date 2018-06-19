@@ -1,23 +1,90 @@
 
-let masterSize = 15;
-
-let agogo = {
+let masterSize = 12;
+//   Colombia
+let alegre = {
   x: 180,
   y: 210,
   sizeX: masterSize,
   sizeY: masterSize,
   threshold: 100
 };
+ let maraca1 = {
+   x: 180,
+   y: 235,
+  sizeX: masterSize,
+   sizeY: masterSize,
+   threshold: 100
+ };
+ let maraca2 = {
+   x: 205,
+   y: 205,
+   sizeX: masterSize,
+   sizeY: masterSize,
+  threshold: 100
+ };
 
-let alegre = {
-  x:403,
-  y:275,
+ let tambora = {
+   x: 205,
+   y: 230,
+   sizeX: masterSize,
+   sizeY: masterSize,
+   threshold: 100
+ };
+ let llamador = {
+   x: 180,
+   y: 260,
+   sizeX: masterSize,
+   sizeY: masterSize,
+   threshold: 100
+ };
+
+ //Brasil
+ let agogo = {
+  x: 400,
+  y: 275,
+ sizeX: masterSize,
+  sizeY: masterSize,
+   threshold: 100
+};
+
+ let surdo2 = {
+  x: 365,
+   y:320,
+   sizeX: masterSize,
+   sizeY: masterSize,
+   threshold: 100
+ };
+ let surdo1 = {
+   x: 355,
+   y: 290,
+   sizeX: masterSize,
+   sizeY: masterSize,
+   threshold: 100
+};
+ let tamborim = {
+   x: 380,
+   y: 295,
+  sizeX: masterSize,
+  sizeY: masterSize,
+   threshold: 100
+ };
+let chocallo = {
+  x:375,
+  y:265,
   sizeX: masterSize,
   sizeY: masterSize,
   threshold:100
 };
+let caixa= {
+  x: 337,
+  y: 315,
+ sizeX: masterSize,
+ sizeY: masterSize,
+  threshold: 100
+};
+// URUGUAY
 
-let caixa = {
+let piano = {
   x:265,
   y:442,
   sizeX: masterSize,
@@ -25,25 +92,52 @@ let caixa = {
   threshold:100
 };
 
+let chico1 = {
+  x:245,
+  y:465,
+  sizeX: masterSize,
+  sizeY: masterSize,
+  threshold:100
+};
+let chico2 = {
+  x:240,
+  y:440,
+  sizeX: masterSize,
+  sizeY: masterSize,
+  threshold:100
+};
+let clave = {
+  x:220,
+  y:465,
+  sizeX: masterSize,
+  sizeY: masterSize,
+  threshold:100
+};
+let repique = {
+  x:227,
+  y:487,
+  sizeX: masterSize,
+  sizeY: masterSize,
+  threshold:100
+};
+
 let instruments = [
-  agogo,
   alegre,
-  caixa
-  //MAKE SURE THAT EACH LINE ENDS WITH A COMMA
-  //EXCEPT FOR THE LAST ONE, PLZ BE CAREFUL
-  // chico1,
-  // chico2,
-  // chocallo,
-  // clave,
-  // llamador,
-  // maraca1,
-  // maraca2,
-  // piano,
-  // repique,
-  // surdo1,
-  // surdo2,
-  // tambora,
-  // tamborim
+  maraca1,
+  maraca2,
+  tambora,
+  llamador,
+  agogo,
+  surdo1,
+  surdo2,
+  tamborim,
+  chocallo,
+  caixa,
+  piano,
+  chico1,
+  chico2,
+  clave,
+  repique
 ];
 
 let soundsPaths = [
@@ -72,13 +166,13 @@ let sounds = [];
 let prePath = 'https://raw.githubusercontent.com/MarcoITP18/granular-latin-america-map/gh-pages/assets/';
 let postPath = '.wav';
 
-let distanceThreshold = 20;
+let distanceThreshold = 10;
 
 function preload() {
 
   //load all the files
   for (var i = 0 ; i < soundsPaths.length; i++) {
-    sounds.push(loadSound(prePath + soundsPaths[i] + postPath));
+      sounds.push(loadSound(prePath + soundsPaths[i] + postPath));
   }
 
 }
